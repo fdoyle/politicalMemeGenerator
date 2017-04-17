@@ -1,0 +1,74 @@
+<div id="controls">
+
+text
+<input type="text" value="Go <strong>Vote</strong> or Something!" id="newText" onkeyup="updateText()"/>
+<br/>
+image url
+<input type="text" value="https://www.aoc.gov/sites/default/files/images/buildings/6080137063_3e6c91ee8b_o.jpg" id="newImage" onkeyup="updateImageUrl()"/>
+<br/>
+text color
+<input type="text" id="newTextColor" value="white" onkeyup="updateTextColor()"/>
+
+<br/>
+
+
+text strong color
+<input type="text" id="newStrongTextColor" onkeyup="updateStrongTextColor()" value="orange"/>
+
+<br/>
+
+text background color
+<input type="text" id="newTextBackground" value="#444" onkeyup="updateTextBackgroundColor()"/>
+
+<br/>
+</div>
+
+<table id="images">
+<tr >
+<th>
+
+<button type="button"  onclick="downloadItem('content1')">
+click me!
+</button>
+
+</th>
+
+<th>
+<div>
+
+<div id="content1" class="content">
+  <img id="background1" class="grey background"/>
+  <div id="text-container1" class="text-container">
+    <h1 id="text1" class="text shadowText" >
+      #TEMPORARY
+    </h1>
+  </div>
+</div>
+</div>
+</th>
+</tr>
+
+<tr >
+<th>
+
+<button type="button"  onclick="downloadItem('content2')">
+click me!
+</button>
+
+</th>
+
+<th>
+<div>
+
+<div id="content2" class="content">
+  <img id="background2" class="grey background"/>
+  <div id="text-container2" class="text-container text-background">
+    <h1 id="text2" class="text">
+    #TEMP
+    </h1>
+  </div>
+</div>
+</div>
+</th>
+</tr>
+</table>

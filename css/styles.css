@@ -1,0 +1,84 @@
+
+
+#controls {
+  position:fixed;
+  float:right
+}
+
+#images{
+  float:right;
+}
+
+.background {
+  opacity:80%;
+  position:absolute;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+
+.content{
+  float:right;
+  position:relative;
+  background-color:black;
+  clear:both;
+  width:400px;
+  height:400px;
+}
+
+.text-container{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+.text-background {
+
+}
+
+.text {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin:auto;
+  width: 100%;
+  color: white;
+
+}
+
+.shadowText {
+
+      text-shadow:
+    -1px -1px 0 rgba(0,0,0,.3),
+    1px -1px 0 rgba(0,0,0,.3),
+    -1px 1px 0 rgba(0,0,0,.3),
+    1px 1px 0 rgba(0,0,0,.3);
+}
+
+#content2 .text {
+
+}
+
+#content2 .background{
+  height:56%;
+}
+
+#content2 .text-container{
+    height:46%;
+  top:55%;
+  background-color:black;
+}
+
+.grey {
+    filter: grayscale(80%) brightness(80%);
+  border: 2px;
+}

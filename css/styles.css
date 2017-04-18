@@ -9,8 +9,7 @@
   float:right;
 }
 
-.background {
-  opacity:80%;
+.image {
   position:absolute;
   left:0;
   top:0;
@@ -67,7 +66,7 @@
 
 }
 
-#content2 .background{
+#content2 .image{
   height:56%;
 }
 
@@ -75,9 +74,4 @@
     height:46%;
   top:55%;
   background-color:black;
-}
-
-.grey {
-    filter: grayscale(80%) brightness(80%);
-  border: 2px;
 }

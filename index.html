@@ -41,6 +41,9 @@
     image url
     <input type="text" value="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/US_Capitol_west_side.JPG/1200px-US_Capitol_west_side.JPG" id="newImage" onkeyup="updateImageUrl()"/>
     <br/>
+    saturation
+    <input type="range" value="60" min="0" max="100" oninput="updateImageSaturation()" id="newImageSaturation" onkeyup="updateTextSize()"/>
+    <br/>
   </div>
 
   <table id="images">
@@ -57,9 +60,9 @@
         <div>
 
           <div id="content1" class="content">
-            <img id="background1" class="grey background"/>
-            <div id="text-container1" class="text-container">
-              <h1 id="text1" class="text shadowText" >
+            <img class="image"/>
+            <div class="text-container">
+              <h1 class="text shadowText" >
                 #TEMPORARY
               </h1>
             </div>
@@ -81,7 +84,7 @@
         <div>
 
           <div id="content2" class="content">
-            <img class="grey background" />
+            <img class="image" />
             <div class="text-container text-background">
               <h1  class="text">
                 #TEMP

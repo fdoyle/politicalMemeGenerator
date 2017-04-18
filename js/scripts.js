@@ -4,6 +4,7 @@ $(document).ready(function() {
   updateTextBackgroundColor();
   updateTextColor();
   updateStrongTextColor();
+	updateImageSaturation();
 })
 
 function downloadImage() {
@@ -38,7 +39,12 @@ function updateTextSize(){
 }
 
 function updateImageUrl() {
-	$('.background').attr("src",  document.getElementById("newImage").value);
+	$('.image').attr("src",  document.getElementById("newImage").value);
+}
+
+function updateImageSaturation(){
+	var newValue = 100-document.getElementById("newImageSaturation").value
+		$('.image').css("filter", "grayscale(" + newValue + "%)" );
 }
 
 function updateTextColor() {

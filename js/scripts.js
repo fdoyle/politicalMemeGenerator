@@ -24,7 +24,7 @@ console.log("downloading " + id);
 }
 
 function updateText() {
-	$('.text').html(document.getElementById("newText").value);
+	$('.text').html(document.getElementById("newText").textContent);
   updateTextColor();
 	updateTextSize();
   updateStrongTextColor();

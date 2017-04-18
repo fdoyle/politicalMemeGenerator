@@ -59,5 +59,6 @@ function updateStrongTextColor() {
 
 function updateTextBackgroundColor() {
 var newValue = document.getElementById("newTextBackground").value;
-	$('.text-background').css("background-color", newValue );
+console.log(newValue);
+	$('.text-background').css("background", newValue );
 }

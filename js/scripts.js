@@ -4,7 +4,6 @@ $(document).ready(function() {
   updateTextBackgroundColor();
   updateTextColor();
   updateStrongTextColor();
-
 })
 
 function downloadImage() {
@@ -19,13 +18,21 @@ console.log("downloading " + id);
     link.download = 'politics.jpeg';
     link.href = dataUrl;
     link.click();
-  });
+  }).catch(e => {
+    console.log(e);
+});
 }
 
 function updateText() {
 	$('.text').html(document.getElementById("newText").value);
   updateTextColor();
+	updateTextSize();
   updateStrongTextColor();
+}
+
+function updateTextSize(){
+	var newValue = document.getElementById("newTextSize").value + "px";
+	$(".text").css("fontSize", newValue);
 }
 
 function updateImageUrl() {

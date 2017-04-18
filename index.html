@@ -7,6 +7,9 @@
   <meta name="author" content="Frankd">
 
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon"
+      type="image/png"
+      href="/favicon.png">
   <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -23,23 +26,20 @@
     text
     <input type="text" value="Go <strong>Vote</strong> or Something!" id="newText" onkeyup="updateText()"/>
     <br/>
+    text size
+    <input type="range" value="20" min="16" max="40" oninput="updateTextSize()" id="newTextSize" onkeyup="updateTextSize()"/>
+    <br/>
     image url
     <input type="text" value="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/US_Capitol_west_side.JPG/1200px-US_Capitol_west_side.JPG" id="newImage" onkeyup="updateImageUrl()"/>
     <br/>
     text color
     <input type="text" id="newTextColor" value="white" onkeyup="updateTextColor()"/>
-
     <br/>
-
-
     text strong color
     <input type="text" id="newStrongTextColor" onkeyup="updateStrongTextColor()" value="orange"/>
-
     <br/>
-
     text background color
     <input type="text" id="newTextBackground" value="#444" onkeyup="updateTextBackgroundColor()"/>
-
     <br/>
   </div>
 
@@ -81,9 +81,9 @@
         <div>
 
           <div id="content2" class="content">
-            <img id="background2" class="grey background" />
-            <div id="text-container2" class="text-container text-background">
-              <h1 id="text2" class="text">
+            <img class="grey background" />
+            <div class="text-container text-background">
+              <h1  class="text">
                 #TEMP
               </h1>
             </div>

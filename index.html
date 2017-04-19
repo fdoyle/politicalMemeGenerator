@@ -24,7 +24,7 @@
   <div id="controls" class="w3-panel w3-white w3-card-2 w3-display-container">
     <h1>Controls</h1>
     <h3>Text</h3>
-    <textarea id="newText" rows="5" cols="30" onkeyup="updateText()">Go <strong>Vote</strong> or Something!</textarea>
+    <textarea id="newText" rows="5" cols="30" onkeyup="updateText()" onpaste="updateText()">Go <strong>Vote</strong> or Something!</textarea>
     <br/>
     text size
     <input type="range" value="50" min="16" max="100" oninput="updateTextSize()" id="newTextSize" onkeyup="updateTextSize()"/>
@@ -41,7 +41,7 @@
 
     <h3>Background Image</h3>
     url
-    <input type="text" value="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/US_Capitol_west_side.JPG/1200px-US_Capitol_west_side.JPG" id="newImage" onkeyup="updateImageUrl()"/>
+    <input type="text" value="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/US_Capitol_west_side.JPG/1200px-US_Capitol_west_side.JPG" id="newImage" onpaste="updateImageUrl()" onkeyup="updateImageUrl()"/>
     <br/>
     saturation
     <input type="range" value="60" min="0" max="100" oninput="updateImageFilters()" id="newImageSaturation" onkeyup="updateImageFilters()"/>

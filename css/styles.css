@@ -7,6 +7,8 @@ h1 {
   padding:0;
 }
 
+
+
 #controls {
   position:fixed;
   float:right;
@@ -32,6 +34,22 @@ h1 {
   height:100%;
   object-fit: cover;
   object-position: center;
+}
+
+.logo{
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%) translateY(-50%);
+  top:90%;
+  width:15%;
+  height:15%;
+  background:white;
+-webkit-mask-size:contain;
+-webkit-mask-repeat: no-repeat;
+-webkit-mask-image: url(/DL-logo-solid-white.png);
+    -o-mask-image: url(/DL-logo-solid-white.png);
+    -moz-mask-image: url(/DL-logo-solid-white.png);
+    mask-image: url(/DL-logo-solid-white.png);
 }
 
 .content{
@@ -72,11 +90,14 @@ h1 {
 }
 
 #content2 .text {
-
+  top:33%;
 }
 
 #content2 .image{
   height:56%;
+}
+
+#content2 .logo{
 }
 
 #content2 .text-container{

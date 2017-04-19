@@ -82,3 +82,9 @@ var newValue = document.getElementById("newTextBackground").value;
 console.log(newValue);
 	$('.text-background').css("background", newValue );
 }
+
+function updateLogoColor(){
+	var newValue = document.getElementById("newLogoColor").value;
+	console.log(newValue);
+		$('.logo').css("background", newValue );
+}

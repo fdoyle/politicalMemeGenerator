@@ -4,7 +4,7 @@ $(document).ready(function() {
   updateTextBackgroundColor();
   updateTextColor();
   updateStrongTextColor();
-	updateImageSaturation();
+	updateImageFilters();
 })
 
 function downloadImage() {
@@ -20,7 +20,7 @@ console.log("downloading " + id);
     link.href = dataUrl;
     link.click();
   }).catch(e => {
-    console.log(e);
+		alert(e);
 });
 }
 
@@ -39,12 +39,32 @@ function updateTextSize(){
 }
 
 function updateImageUrl() {
-	$('.image').attr("src",  document.getElementById("newImage").value);
+	//$('.image').attr("src",  document.getElementById("newImage").value); //this is the original code
+
+	//this implementation proxies via crossorigin.me to allow access to more images
+	//this should be replaced with a locally hosted proxy, for better performance and stability
+	var xhr = new XMLHttpRequest();
+	xhr.responseType = 'blob'; //so you can access the response like a normal URL
+	xhr.onreadystatechange = function () {
+	    if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+					$('.image').attr("src",  URL.createObjectURL(xhr.response));
+			} else if(xhr.readyState == XMLHttpRequest.DONE && xhr.status==413){
+				alert("image must be less than 2mb (hopefully that'll be fixed soon)");
+			} else if(xhr.readyState == XMLHttpRequest.DONE){
+				console.log(xhr);
+			}
+	};
+	var imageUrl = "https://crossorigin.me/" + document.getElementById("newImage").value
+	xhr.open('GET', imageUrl, true);
+	// xhr.setRequestHeader('Origin', 'something cool');
+	xhr.send();
+
 }
 
-function updateImageSaturation(){
-	var newValue = 100-document.getElementById("newImageSaturation").value
-		$('.image').css("filter", "grayscale(" + newValue + "%)" );
+function updateImageFilters(){
+	var newSaturation = 100-document.getElementById("newImageSaturation").value
+	var newBrightness = document.getElementById("newImageBrightness").value
+		$('.image').css("filter", "grayscale(" + newSaturation + "%) brightness("+newBrightness+"%)" );
 }
 
 function updateTextColor() {

@@ -25,7 +25,7 @@
     <h1>Controls</h1>
     <h3>General</h3>
     size
-    <input id="newSizeX" onkeyup="updateSize()" value="500" type="number" pattern='[0-9]{10}'/> x <input type="number" pattern='[0-9]{10}' id="newSizeY" onkeyup="updateSize()" value="500"/>
+    <input id="newSizeX" onkeyup="updateSize()" value="500" type="number" pattern='[0-9]{10}' oninput="updateSize()" /> x <input type="number" pattern='[0-9]{10}' id="newSizeY" onkeyup="updateSize()" value="500" oninput="updateSize()" />
     <h3>Text</h3>
     <textarea id="newText" rows="5" cols="30" onkeyup="updateText()" onpaste="updateText()">Go <strong>Vote</strong> or Something!</textarea>
     <br/>

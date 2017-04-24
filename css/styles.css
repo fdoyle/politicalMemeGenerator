@@ -7,6 +7,9 @@ h1 {
   padding:0;
 }
 
+tr {
+  border-spacing: 5em;
+}
 
 
 #controls {
@@ -54,7 +57,7 @@ mask-size:contain;
 
 /*.logo:before{
     content:'';
-    padding-top:100%; /* vertical value as  100% equals width 
+    padding-top:100%; /* vertical value as  100% equals width
     float:left;
 }*/
 
@@ -107,7 +110,25 @@ mask-size:contain;
 }
 
 #content2 .text-container{
-    height:46%;
-  top:55%;
+    height:44%;
+  top:56%;
+  background-color:black;
+}
+
+#content3 .text {
+  top:50%;
+}
+
+#content3 .image{
+  width:50%;
+}
+
+#content3 .logo{
+  left:75%;
+}
+
+#content3 .text-container{
+    width:50%;
+  left:50%;
   background-color:black;
 }

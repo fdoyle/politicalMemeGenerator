@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	updateSize();
 	updateText();
   updateImageUrl();
   updateTextBackgroundColor();
@@ -87,4 +88,11 @@ function updateLogoColor(){
 	var newValue = document.getElementById("newLogoColor").value;
 	console.log(newValue);
 		$('.logo').css("background", newValue );
+}
+
+function updateSize(){
+	var newSizeX = document.getElementById("newSizeX").value;
+	var newSizeY = document.getElementById("newSizeY").value;
+	$('.content').css("width", newSizeX);
+	$('.content').css("height", newSizeY);
 }

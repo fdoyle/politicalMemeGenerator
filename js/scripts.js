@@ -75,8 +75,12 @@ function updateTextColor() {
 }
 
 function updateFont(){
-
 	var newFont = document.getElementById("newFont").value
+		$('.text').css("font-family", newFont);
+}
+
+function setFont(newFont){
+	document.getElementById("newFont").value = newFont;
 		$('.text').css("font-family", newFont);
 }
 

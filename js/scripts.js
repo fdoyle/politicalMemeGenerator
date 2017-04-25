@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	updateSize();
+	updateFont();
 	updateText();
   updateImageUrl();
   updateTextBackgroundColor();
@@ -71,6 +72,12 @@ function updateImageFilters(){
 function updateTextColor() {
 	var newValue = document.getElementById("newTextColor").value;
 	$('.text').css("color", newValue);
+}
+
+function updateFont(){
+
+	var newFont = document.getElementById("newFont").value
+		$('.text').css("font-family", newFont);
 }
 
 function updateStrongTextColor() {

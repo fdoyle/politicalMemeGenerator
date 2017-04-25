@@ -96,3 +96,9 @@ function updateSize(){
 	$('.content').css("width", newSizeX);
 	$('.content').css("height", newSizeY);
 }
+
+function setSize(newSizeX, newSizeY){
+	document.getElementById("newSizeX").value = newSizeX;
+	document.getElementById("newSizeY").value = newSizeY;
+	updateSize();
+}

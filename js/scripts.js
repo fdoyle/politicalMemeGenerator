@@ -7,7 +7,9 @@ $(document).ready(function() {
   updateTextColor();
   updateStrongTextColor();
 	updateImageFilters();
+
 })
+
 
 function downloadImage() {
   console.log("clicking");

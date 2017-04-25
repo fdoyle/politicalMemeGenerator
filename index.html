@@ -21,60 +21,8 @@
 
 <body>
 
-  <div id="controls" class="w3-panel w3-white w3-card-2 w3-display-container">
-    <h1>Political Meme Generator</h1>
-    <h3>General</h3>
-    size
-    <input id="newSizeX" onkeyup="updateSize()" value="800" type="number" pattern='[0-9]{10}' oninput="updateSize()" /> x <input type="number" pattern='[0-9]{10}' id="newSizeY" onkeyup="updateSize()" value="800" oninput="updateSize()" />
-    <br/>
-    <button  type="button" onclick="setSize(800,800)">800x800 (square)</button>
-    <button  type="button" onclick="setSize(1200,630)">1200x630 (facebook)</button>
-    <button  type="button" onclick="setSize(1024,512)">1024x512 (twitter)</button>
-    <h3>Text</h3>
-    <textarea id="newText" rows="5" cols="30" onkeyup="updateText()" onpaste="updateText()">Do something <strong>Great</strong> today</textarea>
-    <br/>
-    text size
-    <input type="text" value="verdana" oninput="updateFont()" id="newFont" onkeyup="updateFont()"/>
-    <br/>
-    <button  type="button" onclick="setFont('Verdana')">Verdana</button>
-    <button  type="button" onclick="setFont('Helvetica')">Helvetica</button>
-    <button  type="button" onclick="setFont('Futura')">Futura</button>
-    <br/>
-    text size
-    <input type="range" value="50" min="16" max="100" oninput="updateTextSize()" id="newTextSize" onkeyup="updateTextSize()"/>
-    <br/>
-    text color
-    <input type="text" id="newTextColor" value="white" onkeyup="updateTextColor()"/>
-    <br/>
-    text strong color
-    <input type="text" id="newStrongTextColor" onkeyup="updateStrongTextColor()" value="orange"/>
-    <br/>
-    text background color
-    <input type="text" id="newTextBackground" value="#444" onkeyup="updateTextBackgroundColor()"/>
-    <br/>
 
-    <h3>Background Image</h3>
-    url
-    <input type="text" value="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/US_Capitol_west_side.JPG/1200px-US_Capitol_west_side.JPG" id="newImage" onpaste="updateImageUrl()" onkeyup="updateImageUrl()"/>
-    <br/>
-    saturation
-    <input type="range" value="60" min="0" max="100" oninput="updateImageFilters()" id="newImageSaturation" onkeyup="updateImageFilters()"/>
-    <br/>
-    brightness
-    <input type="range" value="100" min="0" max="100" oninput="updateImageFilters()" id="newImageBrightness" onkeyup="updateImageFilters()"/>
-    <br/>
-
-    <h3>Logo</h3>
-     color
-    <input type="text" id="newLogoColor" onkeyup="updateLogoColor()" value="white"/>
-    <br/>
-
-    <p>
-      (Try refreshing if you have image issues)
-    </p>
-
-  </div>
-
+<div id="table">
   <table id="images">
     <tr >
       <th>
@@ -147,5 +95,60 @@
       </th>
     </tr>
   </table>
+</div>
+
+<div id="controls" class="w3-panel w3-white w3-card-2 w3-display-container">
+  <h1>Political Meme Generator</h1>
+  <h3>General</h3>
+  size
+  <input id="newSizeX" onkeyup="updateSize()" value="800" type="number" pattern='[0-9]{10}' oninput="updateSize()" /> x <input type="number" pattern='[0-9]{10}' id="newSizeY" onkeyup="updateSize()" value="800" oninput="updateSize()" />
+  <br/>
+  <button  type="button" onclick="setSize(800,800)">800x800 (square)</button>
+  <button  type="button" onclick="setSize(1200,630)">1200x630 (facebook)</button>
+  <button  type="button" onclick="setSize(1024,512)">1024x512 (twitter)</button>
+  <h3>Text</h3>
+  <textarea id="newText" rows="5" cols="30" onkeyup="updateText()" onpaste="updateText()">Do something <strong>Great</strong> today</textarea>
+  <br/>
+  text size
+  <input type="text" value="verdana" oninput="updateFont()" id="newFont" onkeyup="updateFont()"/>
+  <br/>
+  <button  type="button" onclick="setFont('Verdana')">Verdana</button>
+  <button  type="button" onclick="setFont('Helvetica')">Helvetica</button>
+  <button  type="button" onclick="setFont('Futura')">Futura</button>
+  <br/>
+  text size
+  <input type="range" value="50" min="16" max="100" oninput="updateTextSize()" id="newTextSize" onkeyup="updateTextSize()"/>
+  <br/>
+  text color
+  <input type="text" id="newTextColor" value="white" onkeyup="updateTextColor()"/>
+  <br/>
+  text strong color
+  <input type="text" id="newStrongTextColor" onkeyup="updateStrongTextColor()" value="orange"/>
+  <br/>
+  text background color
+  <input type="text" id="newTextBackground" value="#444" onkeyup="updateTextBackgroundColor()"/>
+  <br/>
+
+  <h3>Background Image</h3>
+  url
+  <input type="text" value="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/US_Capitol_west_side.JPG/1200px-US_Capitol_west_side.JPG" id="newImage" onpaste="updateImageUrl()" onkeyup="updateImageUrl()"/>
+  <br/>
+  saturation
+  <input type="range" value="60" min="0" max="100" oninput="updateImageFilters()" id="newImageSaturation" onkeyup="updateImageFilters()"/>
+  <br/>
+  brightness
+  <input type="range" value="100" min="0" max="100" oninput="updateImageFilters()" id="newImageBrightness" onkeyup="updateImageFilters()"/>
+  <br/>
+
+  <h3>Logo</h3>
+   color
+  <input type="text" id="newLogoColor" onkeyup="updateLogoColor()" value="white"/>
+  <br/>
+
+  <p>
+    (Try refreshing if you have image issues)
+  </p>
+
+</div>
 </body>
 </html>

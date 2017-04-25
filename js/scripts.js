@@ -7,6 +7,7 @@ $(document).ready(function() {
   updateTextColor();
   updateStrongTextColor();
 	updateImageFilters();
+	updateTextBackgroundOpacity();
 
 })
 
@@ -114,4 +115,9 @@ function setSize(newSizeX, newSizeY){
 	document.getElementById("newSizeX").value = newSizeX;
 	document.getElementById("newSizeY").value = newSizeY;
 	updateSize();
+}
+
+function updateTextBackgroundOpacity(){
+	var newOpacity = document.getElementById("newTextBackgroundOpacity").value;
+	$('.text-background-transparent').css("opacity", newOpacity);
 }

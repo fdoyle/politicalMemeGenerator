@@ -71,6 +71,31 @@
         </div>
       </th>
     </tr>
+    <tr >
+      <th>
+
+        <button type="button" class="download" onclick="downloadItem('content4')">
+          Download
+        </button>
+
+      </th>
+
+      <th>
+        <div>
+          <div id="content4" class="content">
+            <img class="image" />
+            <div class="text-container text-background text-background-transparent">
+            </div>
+            <div class="text-container">
+              <h1  class="text">
+                #TEMP
+              </h1>
+            </div>
+            <div class="logo"></div>
+          </div>
+        </div>
+      </th>
+    </tr>
 
     <tr >
       <th>
@@ -85,6 +110,32 @@
           <div id="content3" class="content">
             <img class="image" />
             <div class="text-container text-background">
+              <h1  class="text">
+                #TEMP
+              </h1>
+            </div>
+            <div class="logo"></div>
+          </div>
+        </div>
+      </th>
+    </tr>
+
+
+    <tr >
+      <th>
+
+        <button type="button" class="download" onclick="downloadItem('content5')">
+          Download
+        </button>
+
+      </th>
+      <th>
+        <div>
+          <div id="content5" class="content">
+            <img class="image" />
+            <div class="text-container text-background text-background-transparent">
+            </div>
+            <div class="text-container">
               <h1  class="text">
                 #TEMP
               </h1>
@@ -127,6 +178,9 @@
   <br/>
   text background color
   <input type="text" id="newTextBackground" value="#444" onkeyup="updateTextBackgroundColor()"/>
+  <br/>
+  text background-opacity
+  <input type="range" value=".5" min="0" max="1" step=".05" oninput="updateTextBackgroundOpacity()" id="newTextBackgroundOpacity" onkeyup="updateTextBackgroundOpacity()"/>
   <br/>
 
   <h3>Background Image</h3>

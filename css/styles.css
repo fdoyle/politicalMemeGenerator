@@ -45,6 +45,7 @@ tr {
 .logo{
   position:absolute;
   left:50%;
+  visibility: hidden;
   transform: translateX(-50%) translateY(-50%);
   top:90%;
   width:15%;
@@ -97,7 +98,7 @@ mask-size:contain;
 }
 
 #content2 .text {
-  top:33%;
+  top:50%;
 }
 
 #content2 .image{
@@ -133,7 +134,7 @@ mask-size:contain;
 
 
 #content4 .text {
-  top:40%;
+  top:50%;
 }
 
 #content4 .image{
